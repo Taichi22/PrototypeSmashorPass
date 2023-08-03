@@ -4,11 +4,11 @@ var tinderContainer = document.querySelector('.tinder');
 var allCards = document.querySelectorAll('.tinder--card');
 var nope = document.getElementById('nope');
 var love = document.getElementById('love');
-const imgpath = './img'
+const imgpath = './img/'
 
 // script.js
 function getUniqueNamesInImageFolder() {
-  const imagesFolderPath = '/img'; // Relative path to the images folder
+  const imagesFolderPath = './img/'; // Relative path to the 'img' subdirectory
   const uniqueNames = [];
 
   fetch(imagesFolderPath)
@@ -19,19 +19,18 @@ function getUniqueNamesInImageFolder() {
       return response.text();
     })
     .then((html) => {
-      const imageFiles = html.split('\n').filter(file => file.trim().length > 0);
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      const imageElements = doc.querySelectorAll('a[href$=".jpg"]');
 
-      imageFiles.forEach((file) => {
-        const name = file.split('_')[0];
-        if (!uniqueNames.includes(name)) {
-          uniqueNames.push(name);
+      imageElements.forEach((image) => {
+        const nameWithoutSuffix = image.textContent.replace(/\d+\.\w+$/, ''); // Removes the number and extension
+        if (!uniqueNames.includes(nameWithoutSuffix)) {
+          uniqueNames.push(nameWithoutSuffix);
         }
       });
 
-      return uniqueNames;
-    })
-    .then((names) => {
-      console.log('Unique names in the image folder:', names);
+      console.log('Unique names in the image folder:', uniqueNames);
     })
     .catch((err) => {
       console.error('Error:', err);
