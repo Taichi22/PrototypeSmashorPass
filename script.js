@@ -8,7 +8,7 @@ const imgpath = './img'
 
 // script.js
 function getUniqueNamesInImageFolder() {
-  const imagesFolderPath = './imag'; // Relative path to the images folder
+  const imagesFolderPath = './img'; // Relative path to the images folder
   const uniqueNames = [];
 
   fetch(imagesFolderPath)
