@@ -11,7 +11,7 @@ var currentIndex = 0;
 const imgpath = './img/'
 const imgarray = ['DitzE', 'Barron', 'Beanie', 'Kym', 'Star', 'Skylocke', 
                   'Deca', 'Pratreo', 'DejaWukong', 'Milkie', 'HeroAges', 'Chim', 
-                  'Triplej', 'Scenecade', 'Skatey', 'Cocoa', 'Sol', 
+                  'TripleJ', 'Scenecade', 'Skatey', 'Cocoa', 'Sol', 
                   'Witchy', 'Sunji', 'Crowz', 'Nemu', 'Woney', 
                   'Butler', 'Sylvie', 'Dragonspit', 'MIntchi', 'Jane', 'Mono', 
                   'Veta', 'Zalion', 'Deadman', 'Endo', 'ChaosLily', 'Gemini', 
@@ -24,7 +24,7 @@ var imgdict = {'Aldini': 3, 'Apolloka': 3, 'Barron': 3, 'Beanie': 4, 'Butler': 4
 'Dragonspit': 3, 'Endo': 3, 'Gemini': 3, 'Goronyanya': 3, 'HeroAges': 4, 'Jane': 2, 'Kaia': 4, 'Kayda': 4, 'Kaze': 1, 
 'Kym': 1, 'Lunae': 2, 'Mable': 1, 'Macchi': 3, 'Milkie': 4, 'MIntchi': 1, 'Mono': 2, 'Mora': 4, 'Musashi': 3, 'Nemu': 2, 
 'Oathborne': 1, 'Pratreo': 4, 'Quattro': 2, 'Ravenna': 3, 'Riri': 3, 'Saejima': 3, 'Scenecade': 2, 'Skatey': 1, 'Skylocke': 3, 
-'Sol': 3, 'Star': 1, 'Sunji': 2, 'SunWon': 2, 'Sylvie': 4, 'Tigra': 2, 'Triplej': 2, 'Veta': 4, 'Witchy': 3, 'Woney': 2, 
+'Sol': 3, 'Star': 1, 'Sunji': 2, 'SunWon': 2, 'Sylvie': 4, 'Tigra': 2, 'TripleJ': 2, 'Veta': 4, 'Witchy': 3, 'Woney': 2, 
 'Xantherous': 3, 'Xikesh': 3, 'Zalion': 4, 'Fionn' : 4, 'Matcha' : 3, 'AlexTGTV' : 4, 'Eskodohn': 1, 'Vermire' : 1}
 var profileDict = {'Aldini': `Hyellor Hyellor! Im a High-elf/vampy nb who owns a library in a Lavender Field ✨ I give good Hugs!`, 
 'Apolloka': `UwU`, 
@@ -88,7 +88,7 @@ Guardian Guild leader and Big Brother to most! Chinchilla enthusiasts with a kna
 'Sunji': "Ahh fuck it yknow don’t break my heart to hard :')", 
 'Sylvie': `Ahoy to all gals, pals, and yall! I'm Sylvie the Sea Witch, a variety vtuber hailing from the deep seas 🌊 I'm ready to be judged 💕`, 
 'Tigra': `Hello and how do you do? My name is Tigra Valentine. I am a Vampire Goddess Tigress that love to play a variety of games. ^w^`, 
-'Triplej': `Hey, my name's Triple J. The D.N.A. vtuber. Just your average genetic hybrid made with different genetic materials to obey my creators but I said 'nah' and now I stream and goof off`, 
+'TripleJ': `Hey, my name's Triple J. The D.N.A. vtuber. Just your average genetic hybrid made with different genetic materials to obey my creators but I said 'nah' and now I stream and goof off`, 
 'Veta': `I’m a Yeti who provides shelter to travelers who get lost in the deep snowy mountain. In my spare time I play Video games and take care of my Yeti son (see image)`, 
 'Witchy': `Well hello there!~ I’m witchy tea cup. You can call my Tea. I love meeting knew sacrifices- I mean familiars and I can’t wait to meet all of you~`, 
 'Woney': `Used to be a witch’s familiar, now I’m a human ❤️`, 
