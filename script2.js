@@ -25,7 +25,7 @@ var imgdict = {'Aldini': 3, 'Apolloka': 3, 'Barron': 3, 'Beanie': 4, 'Butler': 4
 'Kym': 1, 'Lunae': 2, 'Mable': 1, 'Macchi': 3, 'Milkie': 4, 'MIntchi': 1, 'Mono': 2, 'Mora': 4, 'Musashi': 1, 'Nemu': 2, 
 'Oathborne': 1, 'Pratreo': 4, 'Quattro': 2, 'Ravenna': 3, 'Riri': 3, 'Saejima': 3, 'Scenecade': 2, 'Skatey': 1, 'Skylocke': 3, 
 'Sol': 3, 'Star': 1, 'Sunji': 2, 'SunWon': 2, 'Sylvie': 4, 'Tigra': 2, 'Triplej': 2, 'Veta': 4, 'Witchy': 3, 'Woney': 2, 
-'Xantherous': 3, 'Xikesh': 3, 'Zalion': 4, 'Fionn' : 4, 'Matcha' : 1, 'AlexTGTV' : 4, 'Eskodohn': 1, 'Vermire' : 1}
+'Xantherous': 3, 'Xikesh': 3, 'Zalion': 4, 'Fionn' : 4, 'Matcha' : 3, 'AlexTGTV' : 4, 'Eskodohn': 1, 'Vermire' : 1}
 var profileDict = {'Aldini': `Hyellor Hyellor! Im a High-elf/vampy nb who owns a library in a Lavender Field ✨ I give good Hugs!`, 
 'Apolloka': `UwU`, 
 'Barron': `Hello prototype I’m king barron I’m a half lion half human warrior trying to build his own kingdom and be king`, 
