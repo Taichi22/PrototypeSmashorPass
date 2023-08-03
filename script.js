@@ -6,53 +6,39 @@ var nope = document.getElementById('nope');
 var love = document.getElementById('love');
 const imgpath = './img'
 
-function getUniqueNamesInImageFolder(callback) {
+// script.js
+function getUniqueNamesInImageFolder() {
+  const imagesFolderPath = './images'; // Relative path to the images folder
   const uniqueNames = [];
 
-  fetch(imgpath)
-    .then((response) => response.text())
+  fetch(imagesFolderPath)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.text();
+    })
     .then((html) => {
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, 'text/html');
-      const imageElements = doc.querySelectorAll('img');
+      const imageFiles = html.split('\n').filter(file => file.trim().length > 0);
 
-      imageElements.forEach((image) => {
-        const nameWithoutSuffix = image.src.split('/').pop().replace(/\d+\.\w+$/, '');
-        if (!uniqueNames.includes(nameWithoutSuffix)) {
-          uniqueNames.push(nameWithoutSuffix);
+      imageFiles.forEach((file) => {
+        const name = file.split('_')[0];
+        if (!uniqueNames.includes(name)) {
+          uniqueNames.push(name);
         }
       });
 
-      callback(null, uniqueNames);
+      return uniqueNames;
+    })
+    .then((names) => {
+      console.log('Unique names in the image folder:', names);
     })
     .catch((err) => {
-      callback(err);
+      console.error('Error:', err);
     });
 }
 
-// Usage:
-getUniqueNamesInImageFolder((err, uniqueNames) => {
-  if (err) {
-    console.error('Error:', err);
-    return;
-  }
-
-  console.log('Unique names in the image folder:', uniqueNames);
-});
-
 getUniqueNamesInImageFolder();
-
-function initCards(card, index) {
-  var newCards = document.querySelectorAll('.tinder--card:not(.removed)');
-
-  newCards.forEach(function (card, index) {
-    card.style.zIndex = allCards.length - index;
-    card.style.transform = 'scale(' + (20 - index) / 20 + ') translateY(-' + 30 * index + 'px)';
-    card.style.opacity = (10 - index) / 10;
-  });
-  
-  tinderContainer.classList.add('loaded');
-}
 
 initCards();
 
