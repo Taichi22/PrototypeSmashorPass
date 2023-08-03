@@ -138,3 +138,11 @@ body {
 .fa-remove {
   color: #CDD6DD;
 }
+
+.profile{
+  object-fit: contain;
+  border-radius: 20px;
+  max-width: 100%;
+  height: 40vh;
+  margin-top: 20px;
+}

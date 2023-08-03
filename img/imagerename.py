@@ -9,15 +9,28 @@ import os
 import re
 
 def rename_images(directory='.'):
+    allnames = set()
     for filename in os.listdir(directory):
-        name, ext = os.path.splitext(filename)
-        match = re.match(r'(\D+)(\d+)$', name)
-        if match:
-            name_with_underscore = match.group(1) + '_' + match.group(2)
-            new_name = name_with_underscore + ext
-            os.rename(os.path.join(directory, filename), os.path.join(directory, new_name))
-            print(f"Renamed {filename} to {new_name}")
-
+        filename.replace('Cropped', '')
+        if not '_' in filename:
+            namearr = filename.split('.')
+            if 'jpg' in namearr or 'png' in namearr:
+                if not namearr[0].isalpha():
+                    finalname = namearr[0][0:len(namearr[0]) - 1] + '_' + namearr[0][-1] + '.jpg'
+                else:
+                    finalname = namearr[0] + '_1' + '.jpg'
+                #os.rename(filename, finalname)
+        else:
+            finalname = filename.replace("Cropped", '')
+            finalname = finalname.replace(".png", ".jpg")
+        print(finalname)
+        try:
+            os.rename(filename, finalname)
+        except:
+            print("Trying to rename" + filename + " to " + finalname)
+            continue
+        allnames.add(finalname.split('_')[0])
+    print(allnames)
 # Usage example:
 # Rename image files in the current directory
 rename_images()
