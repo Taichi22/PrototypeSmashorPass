@@ -9,7 +9,7 @@ import os
 import re
 
 def rename_images(directory='.'):
-    allnames = set()
+    allnames = dict()
     for filename in os.listdir(directory):
         filename.replace('Cropped', '')
         if not '_' in filename:
@@ -29,7 +29,11 @@ def rename_images(directory='.'):
         except:
             print("Trying to rename" + filename + " to " + finalname)
             continue
-        allnames.add(finalname.split('_')[0])
+        name = finalname.split('_')[0]
+        if(not name in allnames):
+            allnames[name] = 1
+        else:
+            allnames[name] += 1
     print(allnames)
 # Usage example:
 # Rename image files in the current directory

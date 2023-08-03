@@ -67,9 +67,9 @@ body {
 
 .tinder--card {
   display: inline-block;
-  width: 90vw;
-  max-width: 400px;
-  height: 70vh;
+  width: 200vw;
+  max-width: 500px;
+  height: 80vh;
   background: #FFFFFF;
   padding-bottom: 40px;
   border-radius: 8px;
@@ -146,3 +146,22 @@ body {
 .fa-remove {
   color: #CDD6DD;
 }
+
+.tinder--card p {
+  transition: transform 0.3s ease;
+  transform-origin: top;
+  max-height: 120px;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif; /* Replace 'Open Sans' with your preferred font */
+
+}
+
+.tinder--card:hover p {
+  /* Adjust the max height based on your card's desired maximum height */
+  max-height: 120px; /* Set the maximum height for the <p> element */
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif; /* Replace 'Roboto' with your preferred font */
+}
+
