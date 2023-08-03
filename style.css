@@ -92,7 +92,7 @@ body {
 .tinder--card img {
   border-radius: 8px;
   width: calc(100% - 16px);
-  height: auto;
+  max-height: 300px;
   object-fit: contain;
   pointer-events: none;
   overflow: hidden;

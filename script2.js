@@ -11,21 +11,21 @@ var currentIndex = 0;
 const imgpath = './img/'
 const imgarray = ['DitzE', 'Barron', 'Beanie', 'Kym', 'Star', 'Skylocke', 
                   'Deca', 'Pratreo', 'DejaWukong', 'Milkie', 'HeroAges', 'Chim', 
-                  'TripleJ', 'Scenecade', 'Skatey', 'Cocoa', 'Sol', 
+                  'Triplej', 'Scenecade', 'Skatey', 'Cocoa', 'Sol', 
                   'Witchy', 'Sunji', 'Crowz', 'Nemu', 'Woney', 
                   'Butler', 'Sylvie', 'Dragonspit', 'MIntchi', 'Jane', 'Mono', 
                   'Veta', 'Zalion', 'Deadman', 'Endo', 'ChaosLily', 'Gemini', 
                   'Mora', 'Kaia', 'Quattro', 'Xikesh', 'Ravenna', 'Kaze', 'Canaria', 
                   'Goronyanya', 'Kayda', 'Oathborne', 'Macchi', 'Mable', 'Aldini', 
                   'Riri', 'Musashi', 'Xantherous', 'Draggon', 'Tigra', 'Apolloka', 'Saejima', 'Lunae', 'SunWon', 
-                  'Fionn', 'Matcha', 'AlexTGTV']
+                  'Fionn', 'Matcha', 'AlexTGTV', 'Eskodohn', 'Vermire']
 var imgdict = {'Aldini': 3, 'Apolloka': 3, 'Barron': 3, 'Beanie': 4, 'Butler': 4, 'Canaria': 1, 'ChaosLily': 4, 
 'Chim': 4, 'Cocoa': 1, 'Crowz': 1, 'Deadman': 3, 'Deca': 3, 'DejaWukong': 4, 'DitzE': 2, 'Draggon': 2, 
 'Dragonspit': 3, 'Endo': 3, 'Gemini': 3, 'Goronyanya': 1, 'HeroAges': 4, 'Jane': 2, 'Kaia': 4, 'Kayda': 4, 'Kaze': 1, 
 'Kym': 1, 'Lunae': 2, 'Mable': 1, 'Macchi': 3, 'Milkie': 4, 'MIntchi': 1, 'Mono': 2, 'Mora': 4, 'Musashi': 1, 'Nemu': 2, 
 'Oathborne': 1, 'Pratreo': 4, 'Quattro': 2, 'Ravenna': 3, 'Riri': 1, 'Saejima': 3, 'Scenecade': 2, 'Skatey': 1, 'Skylocke': 1, 
 'Sol': 3, 'Star': 1, 'Sunji': 2, 'SunWon': 2, 'Sylvie': 4, 'Tigra': 2, 'Triplej': 2, 'Veta': 4, 'Witchy': 3, 'Woney': 2, 
-'Xantherous': 3, 'Xikesh': 3, 'Zalion': 4, 'Fionn' : 4, 'Matcha' : 1, 'AlexTGTV' : 4}
+'Xantherous': 3, 'Xikesh': 3, 'Zalion': 4, 'Fionn' : 4, 'Matcha' : 1, 'AlexTGTV' : 4, 'Eskodohn': 1, 'Vermire' : 1}
 var profileDict = {'Aldini': `Hyellor Hyellor! Im a High-elf/vampy nb who owns a library in a Lavender Field ✨ I give good Hugs!`, 
 'Apolloka': `UwU`, 
 'Barron': `Hello prototype I’m king barron I’m a half lion half human warrior trying to build his own kingdom and be king`, 
@@ -103,7 +103,8 @@ I just returned from my year hiatus!`,
 'Fionn' : `🍀🔒 I'm ready to guide your spirit to the afterlife ~
 Right after I nom on that baguette :3`, 
 'Matcha' : `Hiiii I'm Matcha a kitsune sorceress nice to meet you!`, 
-'AlexTGTV' : `Hello my name AlexTGTV, am a Vampire/Demon who fight and survive over 400 years with a ocean of bloods`}
+'AlexTGTV' : `Hello my name AlexTGTV, am a Vampire/Demon who fight and survive over 400 years with a ocean of bloods`, 'Eskodohn' : `here you go!`, 
+'Vermire' : `I am Lord Vermire! A vampire cow! I reside in a castle with my demon cow maid Vermisa and merchant fox lady Somicidas`}
 
 
 imgarray.sort()
