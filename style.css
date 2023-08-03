@@ -79,6 +79,8 @@ body {
   transition: all 0.3s ease-in-out;
   cursor: -webkit-grab;
   cursor: grab;
+  text-align: center;
+  margin: 8px;
 }
 
 .moving.tinder--card {
@@ -88,8 +90,14 @@ body {
 }
 
 .tinder--card img {
-  max-width: 100%;
+  border-radius: 8px;
+  width: calc(100% - 16px);
+  height: auto;
+  object-fit: contain;
   pointer-events: none;
+  overflow: hidden;
+  max-height: 50vh;
+  margin: 8px;
 }
 
 .tinder--card h3 {
@@ -137,12 +145,4 @@ body {
 
 .fa-remove {
   color: #CDD6DD;
-}
-
-.profile{
-  object-fit: contain;
-  border-radius: 20px;
-  max-width: 100%;
-  height: 40vh;
-  margin-top: 20px;
 }

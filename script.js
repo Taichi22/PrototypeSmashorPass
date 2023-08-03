@@ -12,11 +12,11 @@ const imgarray = ['DitzE', 'Barron', 'Beanie', 'Kym', 'Star', 'Skylocke',
                   'Deca', 'Pratreo', 'DejaWukong', 'Milkie', 'HeroAges', 'Chim', 
                   'ChristFire', 'TripleJ', 'Scenecade', 'Skatey', 'Cocoa', 'Sol', 
                   'Witchy', 'Sunji', 'Crowz', 'Nemu', 'Woney', 
-                  'Butler', 'Sylvie', 'Dragonspit', 'mlntchi', 'Jane', 'Mono', 
+                  'Butler', 'Sylvie', 'Dragonspit', 'MIntchi', 'Jane', 'Mono', 
                   'Veta', 'Zalion', 'Deadman', 'Endo', 'ChaosLily', 'Gemini', 
                   'Mora', 'Kaia', 'Quattro', 'Xikesh', 'Ravenna', 'Kaze', 'Canaria', 
-                  'Goronyanya', 'Kayda', 'Oathborne', 'Macchi', 'Marble', 'Aldini', 
-                  'Riri', 'Mushashi', 'Xantherous', 'Draggon', 'Tigra', 'Apolloka', 'Saejima']
+                  'Goronyanya', 'Kayda', 'Oathborne', 'Macchi', 'Mable', 'Aldini', 
+                  'Riri', 'Musashi', 'Xantherous', 'Draggon', 'Tigra', 'Apolloka', 'Saejima']
 
 imgarray.sort()
 allCards.forEach(function (el) {
@@ -118,7 +118,7 @@ function createCard(cardData, zIndex) {
       var rotate = xMulti * yMulti;
 
       event.target.style.transform = 'translate(' + toX + 'px, ' + (toY + event.deltaY) + 'px) rotate(' + rotate + 'deg)';
-      initCards();
+      updateCards();
     }
   });
 
@@ -156,6 +156,10 @@ function updateCards(card, index){
   var oldCards = document.querySelectorAll('.removed');
   let cardImg = imgarray.shift()
   let imgcopy = [... imgarray]
+  newCards.forEach(function (card, index) {
+    card.style.zIndex = allCards.length - index;
+    card.style.transform = 'scale(' + (20 - index) / 20 + ') translateY(-' + 30 * index + 'px)';
+    card.style.opacity = (10 - index) / 10;});
   if(newCards.length < cardlength && imgcopy.length > 0){
     //generate new cards
     var newCard = createCard(cardImg + '', 5)
